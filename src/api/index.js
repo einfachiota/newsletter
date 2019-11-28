@@ -1,6 +1,7 @@
 import { version } from '../../package.json';
 import { Router } from 'express';
 import auth from './auth'
+import subscribers from './subscribers';
 
 export default ({ config, db }) => {
 	let api = Router();
@@ -11,6 +12,8 @@ export default ({ config, db }) => {
 	api.get('/', (req, res) => {
 		res.json({ version });
 	});
+
+	api.use('/subscribers', subscribers({ config, db }))
 
 	return api;
 }

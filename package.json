@@ -1,7 +1,7 @@
 {
   "name": "newsletter",
   "version": "0.0.1",
-  "description": "A Newsletter microservices which handles subscriber",
+  "description": "A Newsletter microservice which handles subscriber",
   "main": "index.js",
   "scripts": {
     "start": "node dist",
@@ -32,6 +32,7 @@
     "express": "^4.17.1",
     "mongoose": "^5.7.12",
     "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.0",
+    "resource-router-middleware": "^0.7.0"
   }
 }
